@@ -1,0 +1,145 @@
+/*!
+ * BukaJoint
+ *
+ * Copyright 2019
+ * Licensed to Bella Oyedele
+ * https://twitter.com/alleb_d
+ *
+ * CSS Designed by @alleb_d.
+ */
+ /* imports */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Rancho:100,200,300,400,500,600,700,800,900,thin,thinitalic,light,lightitalic,regular,regularitalic,medium,mediumitalic,bold,bolditalic,black,blackitalic');
+
+ /* Color Variable declaration */
+:root {
+    --light-green: #00ad00;
+    --orange: #ff8801;
+    --black: #292929;
+    --light-grey: #c4c4c490;
+    --dark-grey: #a6a6a6;
+    --background: #f4f6f9;
+}
+
+ *, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rancho', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 59px;
+    color: var(--black);
+}
+
+p {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    height: 100vh;    
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 2em auto auto;
+    grid-template-areas: "... logo ..." "... landing-info landing-food" "footer footer footer";
+}
+
+.logo {
+    display: grid;
+    grid-area: logo;
+    margin: 1.8em 0;
+}
+
+.logo embed {
+    width: 300px;
+    height: auto;
+}
+
+/* Main-content */
+.landing-info {
+    display: grid;
+    grid-area: landing-info;
+    justify-content: center;
+    align-content: center;
+}
+
+.landing-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.landing-button a {
+    width: 100%;
+    display: block;
+}
+
+button {
+    padding: 1.2em 2.7em;
+    border: 0;
+    color: white;
+    background: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 3px;
+    margin: 1.2em 0;
+    text-transform: uppercase;
+    width: 100%;
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+    background: var(--light-green);
+}
+
+.button-customer {
+    background: var(--orange);
+    margin-left: 0.9em;
+}
+
+/* Food-content */
+
+.landing-food {
+    display: grid;
+    grid-area: landing-food;
+    align-self: end;
+    justify-self: end;
+    padding: 0;
+}
+
+.landing-food .vegetable {
+    max-width: 100%;
+    height: 500px;
+}
+
+/* Footer-content */
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    background: var(--light-green);
+    color: white;
+    padding: 0.4em 1.2em;
+    z-index: 1;
+}
+
+footer p{
+    font-size: 17px;
+}
+
+p.owner a{
+    color: var(--orange);
+}
